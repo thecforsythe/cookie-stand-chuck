@@ -57,7 +57,8 @@ var capitolHill = {
   aveCookieSale: 2.3,
   simulateCookiesPerHour: simulateCookiesPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
-};var alki = {
+};
+var alki = {
   location: 'Alki',
   streetAddress: '3890 Rupet Way',
   hourOpen: 6,
