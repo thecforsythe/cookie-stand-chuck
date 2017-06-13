@@ -1,13 +1,27 @@
 var randomCustomerPerHour = function() {
   return Math.floor(Math.random() * (this.maxNumberCustomers - this.minNumberCustomers + 1)) + this.minNumberCustomers;
 };
+var convert24HourTime = function(number){
+  if(number === 0 || number === 24) {
+    return '12 AM';
+  }
+  else if (number === 12) {
+    return '12 PM';
+  }
+  else if (number <= 11) {
+    return number + ' AM';
+  }
+  else if (number < 24) {
+    return (number - 12) + ' PM';
+  }
+};
 
 var simulateCookiesPerHour = function () {
   var hours = [];
   for(var i = 0; i < this.hourClosed - this.hourOpen; i++) {
     var customerCount = this.randomCustomerPerHour();
     var time = (i + 6);
-    console.log('hours: ' + time + ', cookies: ' + customerCount);
+    console.log('hours: ' + convert24HourTime(time) + ', cookies: ' + customerCount);
     hours[i] = customerCount * this.aveCookieSale;
     console.log(hours);
     this.cookiesPerHour = hours;
