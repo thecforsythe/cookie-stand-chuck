@@ -21,9 +21,8 @@ var simulateCookiesPerHour = function () {
   for(var i = 0; i < this.hourClosed - this.hourOpen; i++) {
     var customerCount = this.randomCustomerPerHour();
     var time = (i + 6);
-    console.log('hours: ' + convert24HourTime(time) + ', cookies: ' + customerCount);
-    hours[i] = customerCount * this.aveCookieSale;
-    console.log(hours);
+    //console.log('hours: ' + convert24HourTime(time) + ', cookies: ' + customerCount);
+    hours[i] = customerCount * this.aveCookieSalePerCustomer;
     this.cookiesPerHour = hours;
   }
 };

@@ -1,5 +1,7 @@
 for(var i = 0; i < allLocations.length; i++){
   var currentLocation = allLocations[i];
+
+  currentLocation.simulateCookiesPerHour();
   console.log(currentLocation);
 
 // Create a header for each of the restaraunt locations.
@@ -12,9 +14,10 @@ for(var i = 0; i < allLocations.length; i++){
   document.body.appendChild(newList);
 
 //If we copy the model above could we take simulateCookiesPerHour, use a for loop and store the lists of cookies per hours as an array called cookiesPerHourPerLocation.
-  for(var j = 0; j < allLocations.length; j++){
-    var cookiesPerHourPerLocation = simulateCookiesPerHour[j];
-    console.log(cookiesPerHourPerLocation);
+  for(var j = 0; j < currentLocation.cookiesPerHour.length; j++){
+    var customerCount = currentLocation.cookiesPerHour[j];
+    var time = (j + 6);
+    console.log('hours: ' + convert24HourTime(time) + ', cookies: ' + customerCount);
 
   // then we could append the stored arrays and insert them under the h3 element Create a unorderd list of the time followed by the number of cookies sold.
 
