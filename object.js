@@ -28,14 +28,12 @@ var simulateCookiesPerHour = function () {
   }
 };
 
-function EmptyLocationData(location, streetAddress, minNumberCustomers, maxNumberCustomers,aveCookieSalePerCustomer, simulateCookiesPerHour, randomCustomerPerHour, hourOpen, hourClosed) {
+function EmptyLocationData(location, streetAddress, minNumberCustomers, maxNumberCustomers,aveCookieSalePerCustomer, hourOpen, hourClosed) {
   this.location = location;
   this.streetAddress = streetAddress;
   this.minNumberCustomers = minNumberCustomers;
   this.maxNumberCustomers = maxNumberCustomers;
   this.aveCookieSalePerCustomer = aveCookieSalePerCustomer;
-  this.simulateCookiesPerHour = simulateCookiesPerHour;
-  this.randomCustomerPerHour = randomCustomerPerHour;
   this.hourOpen = hourOpen || this.defaultHourOpen;
   this.hourClosed = hourClosed || this.defaultHourClosed;
 }
@@ -44,6 +42,10 @@ EmptyLocationData.prototype.defaultHourOpen = 6;
 EmptyLocationData.prototype.defaultHourClosed = 20;
 EmptyLocationData.prototype.simulateCookiesPerHour = simulateCookiesPerHour;
 EmptyLocationData.prototype.randomCustomerPerHour = randomCustomerPerHour;
+
+EmptyLocationData.prototype.render = function() {
+  console.log(this);
+};
 
 //var firstAndPike = new EmptyLocationData('Pickle', '1200 Franklin', 2, 10, 3.33);
 //console.log(firstAndPike);
@@ -55,6 +57,8 @@ var AllLocationData = [
   new EmptyLocationData('Capitol Hill', '4489 N. Capitol St.', 20, 38, 2.3),
   new EmptyLocationData('Alki', '3890 Rupet Way', 2, 16, 4.6),
 ];
+
+AllLocationData[0].simulateCookiesPerHour()
 /* Old object data
 var firstAndPike = {
   location: 'First and Pike',
