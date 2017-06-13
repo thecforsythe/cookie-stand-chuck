@@ -7,19 +7,21 @@ for(var i = 0; i < allLocations.length; i++){
   newH3.textContent = currentLocation.location;//textContent: takes the .location of each location stored in the Array named currentLocation.
   document.body.appendChild(newH3);//appendChild takes .location and adds it as an h3 element, which is the child element of body.
 
+  //want to create a list for each location
+  var newList = document.createElement('ul');
+  document.body.appendChild(newList);
+
 //If we copy the model above could we take simulateCookiesPerHour, use a for loop and store the lists of cookies per hours as an array called cookiesPerHourPerLocation.
-  for(var j = 0; j < allLocations.length; i++){
-//want to create a list for each location
+  for(var j = 0; j < allLocations.length; j++){
     var cookiesPerHourPerLocation = simulateCookiesPerHour[j];
-    console.log(cookiesPerLocation);
+    console.log(cookiesPerHourPerLocation);
 
   // then we could append the stored arrays and insert them under the h3 element Create a unorderd list of the time followed by the number of cookies sold.
-    var newList = document.createElement('ul');
-    newList.textContent = cookiesPerHourPerLocation.simulateCookiesPerHour;
-    document.h3.appendChild(newList);
 
-  //So doesn't work................I feel very lost
-
-//At the bottom of the list, sum the array to find the total number of cookies sold that day.
   };
+
+  //At the bottom of the list, sum the array to find the total number of cookies sold that day.
+  var totalListItem = document.createElement('li');
+  newList.appendChild(totalListItem);
+  totalListItem.textContent = 'total';
 };

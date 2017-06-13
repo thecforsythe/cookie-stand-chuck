@@ -118,3 +118,4 @@ var alki = {
 
 var allLocations = [firstAndPike,seaTacAirport,seatleCenter,capitolHill,alki];
 */
+var allLocations = AllLocationData;
