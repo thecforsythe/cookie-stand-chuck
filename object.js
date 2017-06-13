@@ -16,14 +16,14 @@ var convert24HourTime = function(number){
   }
 };
 
-var simulateCookiesPerHour = function () {
+var simulateCustomersPerHour = function () {
   var hours = [];
   for(var i = 0; i < this.hourClosed - this.hourOpen; i++) {
     var customerCount = this.randomCustomerPerHour();
     var time = (i + 6);
     //console.log('hours: ' + convert24HourTime(time) + ', cookies: ' + customerCount);
     hours[i] = customerCount * this.aveCookieSalePerCustomer;
-    this.cookiesPerHour = hours;
+    this.customersPerHour = hours;
   }
 };
 
@@ -39,7 +39,7 @@ function EmptyLocationData(location, streetAddress, minNumberCustomers, maxNumbe
 
 EmptyLocationData.prototype.defaultHourOpen = 6;
 EmptyLocationData.prototype.defaultHourClosed = 20;
-EmptyLocationData.prototype.simulateCookiesPerHour = simulateCookiesPerHour;
+EmptyLocationData.prototype.simulateCustomersPerHour = simulateCustomersPerHour;
 EmptyLocationData.prototype.randomCustomerPerHour = randomCustomerPerHour;
 
 EmptyLocationData.prototype.render = function() {
@@ -57,7 +57,7 @@ var AllLocationData = [
   new EmptyLocationData('Alki', '3890 Rupet Way', 2, 16, 4.6),
 ];
 
-AllLocationData[0].simulateCookiesPerHour()
+AllLocationData[0].simulateCustomersPerHour()
 /* Old object data
 var firstAndPike = {
   location: 'First and Pike',
@@ -67,7 +67,7 @@ var firstAndPike = {
   minNumberCustomers: 23,
   maxNumberCustomers: 65,
   aveCookieSale: 6.3,
-  simulateCookiesPerHour: simulateCookiesPerHour,
+  simulateCustomersPerHour: simulateCustomersPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var seaTacAirport = {
@@ -78,7 +78,7 @@ var seaTacAirport = {
   minNumberCustomers: 3,
   maxNumberCustomers: 24,
   aveCookieSale: 1.2,
-  simulateCookiesPerHour: simulateCookiesPerHour,
+  simulateCustomersPerHour: simulateCustomersPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var seatleCenter = {
@@ -89,7 +89,7 @@ var seatleCenter = {
   minNumberCustomers: 11,
   maxNumberCustomers: 38,
   aveCookieSale: 3.7,
-  simulateCookiesPerHour: simulateCookiesPerHour,
+  simulateCustomersPerHour: simulateCustomersPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var capitolHill = {
@@ -100,7 +100,7 @@ var capitolHill = {
   minNumberCustomers: 20,
   maxNumberCustomers: 38,
   aveCookieSale: 2.3,
-  simulateCookiesPerHour: simulateCookiesPerHour,
+  simulateCustomersPerHour: simulateCustomersPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var alki = {
@@ -111,7 +111,7 @@ var alki = {
   minNumberCustomers: 2,
   maxNumberCustomers: 16,
   aveCookieSale: 4.6,
-  simulateCookiesPerHour: simulateCookiesPerHour,
+  simulateCustomersPerHour: simulateCustomersPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
 };
 
