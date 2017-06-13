@@ -10,21 +10,16 @@ for(var i = 0; i < allLocations.length; i++){
 //If we copy the model above could we take simulateCookiesPerHour, use a for loop and store the lists of cookies per hours as an array called cookiesPerHourPerLocation.
   for(var j = 0; j < allLocations.length; i++){
 //want to create a list for each location
-  var cookiesPerHourPerLocation = simulateCookiesPerHour[j];
-  console.log(cookiesPerLocation);
+    var cookiesPerHourPerLocation = simulateCookiesPerHour[j];
+    console.log(cookiesPerLocation);
 
-// then we could append the stored arrays and insert them under the h3 element Create a unorderd list of the time followed by the number of cookies sold.
-  var newList = document.createElement('ul');
-  newList.textContent = cookiesPerHourPerLocation.simulateCookiesPerHour;
-  document.h3.appendChild(newList);
+  // then we could append the stored arrays and insert them under the h3 element Create a unorderd list of the time followed by the number of cookies sold.
+    var newList = document.createElement('ul');
+    newList.textContent = cookiesPerHourPerLocation.simulateCookiesPerHour;
+    document.h3.appendChild(newList);
 
   //So doesn't work................I feel very lost
 
-
-
 //At the bottom of the list, sum the array to find the total number of cookies sold that day.
+  };
 };
-
-
-};
-*/
