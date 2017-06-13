@@ -14,6 +14,34 @@ var simulateCookiesPerHour = function () {
   }
 };
 
+function EmptyLocationData(location, streetAddress, minNumberCustomers, maxNumberCustomers,aveCookieSalePerCustomer, simulateCookiesPerHour, randomCustomerPerHour, hourOpen, hourClosed) {
+  this.location = location;
+  this.streetAddress = streetAddress;
+  this.minNumberCustomers = minNumberCustomers;
+  this.maxNumberCustomers = maxNumberCustomers;
+  this.aveCookieSalePerCustomer = aveCookieSalePerCustomer;
+  this.simulateCookiesPerHour = simulateCookiesPerHour;
+  this.randomCustomerPerHour = randomCustomerPerHour;
+  this.hourOpen = hourOpen || this.defaultHourOpen;
+  this.hourClosed = hourClosed || this.defaultHourClosed;
+}
+
+EmptyLocationData.prototype.defaultHourOpen = 6;
+EmptyLocationData.prototype.defaultHourClosed = 20;
+EmptyLocationData.prototype.simulateCookiesPerHour = simulateCookiesPerHour;
+EmptyLocationData.prototype.randomCustomerPerHour = randomCustomerPerHour;
+
+//var firstAndPike = new EmptyLocationData('Pickle', '1200 Franklin', 2, 10, 3.33);
+//console.log(firstAndPike);
+
+var AllLocationData = [
+  new EmptyLocationData('First and Pike', '1800 S First St.', 23, 65, 6.3),
+  new EmptyLocationData('SeaTac Airport', '6573 Airport Ave.', 3, 24, 1.2),
+  new EmptyLocationData('Seatle Center', '1200 Johnson Ave', 11, 38, 3.7),
+  new EmptyLocationData('Capitol Hill', '4489 N. Capitol St.', 20, 38, 2.3),
+  new EmptyLocationData('Alki', '3890 Rupet Way', 2, 16, 4.6),
+];
+/* Old object data
 var firstAndPike = {
   location: 'First and Pike',
   streetAddress: '1800 S First St.',
@@ -69,4 +97,6 @@ var alki = {
   simulateCookiesPerHour: simulateCookiesPerHour,
   randomCustomerPerHour: randomCustomerPerHour,
 };
+
 var allLocations = [firstAndPike,seaTacAirport,seatleCenter,capitolHill,alki];
+*/

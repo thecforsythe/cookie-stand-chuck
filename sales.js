@@ -18,6 +18,8 @@ for(var i = 0; i < allLocations.length; i++){
   newList.textContent = cookiesPerHourPerLocation.simulateCookiesPerHour;
   document.h3.appendChild(newList);
 
+  //So doesn't work................I feel very lost
+
 
 
 //At the bottom of the list, sum the array to find the total number of cookies sold that day.
