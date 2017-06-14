@@ -16,17 +16,17 @@
     The best tasting salmon cookies in the tri-state area!<br />
     Made Fresh Daily
   </p>
-  <h1>Sales Data</h1>
+  <h3>Sales Data</h3>
   <form action="https://requestb.in/qjtonmqj">
     <fieldset>
       <legend>Create New Store Location</legend>
 <!-- I don't want bullet points on my inputs so I am using a <p> tag instead of a <li> tag. -->
       <p>
-        Location Name: <input type="text" name="Location Name" />
+        Location Name: <input type="text" name="Location Name" placeholder="First &amp Pike" />
       </p>
 
       <p>
-        Street Address: <input type="text" name="Stree Address" />
+        Street Address: <input type="text" name="Stree Address" placeholder="1800 S First St." />
       </p>
       <p>
         Min Customers: <input type="number" name="Min Customers" />
@@ -35,17 +35,17 @@
         Max Customers: <input type="number" name="Max Customers" />
       </p>
       <p>
-        Average Cookie Sale: <input type="number" name="Average Cookie Sale" />
+        Average Cookie Sale: <input type="number" name="Average Cookie Sale" step="0.1" />
       </p>
       <p>
-        Hour Open: <input type="number" name="Hour Open" />
+        Hour Open: <input type="number" name="Hour Open" min="1" max="12" value="6" step="0.5"/>
         <select name="AM/PM">
           <option value = "AM">AM</option>
           <option value = "PM">PM</option>
         </select>
       </p>
       <p>
-        Hour Close: <input type="number" name="Hour Close" />
+        Hour Close: <input type="number" name="Hour Close" min="1" max="12" value="8" step="0.5"/>
         <select name="AM/PM">
           <option value = "PM">PM</option>
           <option value = "AM">AM</option>
