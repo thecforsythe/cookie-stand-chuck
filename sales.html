@@ -22,34 +22,29 @@
       <legend>Create New Store Location</legend>
 <!-- I don't want bullet points on my inputs so I am using a <p> tag instead of a <li> tag. -->
       <p>
-        Location Name: <input type="text" name="Location Name" placeholder="First &amp Pike" />
-      </p>
+        Location Name: <input type="text" name="Location Name" placeholder="First &amp Pike" id="locN"/><br/>
 
-      <p>
-        Street Address: <input type="text" name="Stree Address" placeholder="1800 S First St." />
-      </p>
-      <p>
-        Min Customers: <input type="number" name="Min Customers" />
-      </p>
-      <p>
-        Max Customers: <input type="number" name="Max Customers" />
-      </p>
-      <p>
-        Average Cookie Sale: <input type="number" name="Average Cookie Sale" step="0.1" />
-      </p>
-      <p>
-        Hour Open: <input type="number" name="Hour Open" min="1" max="12" value="6" step="0.5"/>
+        Street Address: <input type="text" name="Stree Address" placeholder="1800 S First St." id="address"/><br />
+
+        Min Customers: <input type="number" name="Min Customers" id="minC"/><br/>
+
+        Max Customers: <input type="number" name="Max Customers" id="maxC"/><br/>
+
+        Average Cookie Sale: <input type="number" name="Average Cookie Sale" step="0.1" id="average"/><br/>
+
+        Hour Open: <input type="number" name="Hour Open" min="1" max="12" value="6" step="0.5" id="open"/>
         <select name="AM/PM">
           <option value = "AM">AM</option>
           <option value = "PM">PM</option>
-        </select>
-      </p>
-      <p>
-        Hour Close: <input type="number" name="Hour Close" min="1" max="12" value="8" step="0.5"/>
+        </select><br />
+
+        Hour Close: <input type="number" name="Hour Close" min="1" max="12" value="8" step="0.5" id="close"/>
         <select name="AM/PM">
           <option value = "PM">PM</option>
           <option value = "AM">AM</option>
-        </select>
+        </select><br />
+        <input type="submit" name="Submit" id="submit" />
+
       </p>
 
   <!--  <label class="wrapped-label">

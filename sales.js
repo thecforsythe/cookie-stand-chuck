@@ -52,3 +52,27 @@ testSumArray(testArray);
 customerCount);
 };
 */
+
+// selecting all element id's
+var elLocName, elAddress, elMinC, elMaxC, elAverage;
+elLocName = document.getElementById('locName');
+elAddress = document.getElementById('address');
+elMinC = document.getElementById('minC');
+elMaxC = document.getElementById('maxC');
+elAverage = document.getElementById('average');
+
+//function to check there are no blank form fields
+function checkLocName(event){
+  if (elLocName = false) {
+    elLocName.innerHTML = 'Location Name cannot be blank';
+    event.preventDefault();
+  }
+}
+
+//function to create new location object
+function createNewLocationData(){
+
+}
+//
+var clickedSubmit = document.getElementById('submit');
+clickedSubmit.addEventListener('blur', createNewLocationData, false);
