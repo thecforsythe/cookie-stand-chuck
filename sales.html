@@ -4,18 +4,59 @@
   <title>Pat's Salmon Cookies</title>
 </head>
 <body>
-<ul>
-  <li>About Us</li>
-  <li>Locations</li>
-  <li>Menu</li>
-  <li>Contact</li>
+  <ul>
+    <li>About Us</li>
+    <li>Locations</li>
+    <li>Menu</li>
+    <li>Contact</li>
 
-</ul>
-<h1>Pat's Salmon Cookies</h1>
-<p>
-  The best tasting salmon cookies in the tri-state area!<br />
-  Made Fresh Daily
-</p>
+  </ul>
+  <h1>Pat's Salmon Cookies</h1>
+  <p>
+    The best tasting salmon cookies in the tri-state area!<br />
+    Made Fresh Daily
+  </p>
+  <h1>Sales Data</h1>
+  <form action="https://requestb.in/qjtonmqj">
+    <fieldset>
+      <legend>Create New Store Location</legend>
+<!-- I don't want bullet points on my inputs so I am using a <p> tag instead of a <li> tag. -->
+      <p>
+        Location Name: <input type="text" name="Location Name" />
+      </p>
+
+      <p>
+        Street Address: <input type="text" name="Stree Address" />
+      </p>
+      <p>
+        Min Customers: <input type="number" name="Min Customers" />
+      </p>
+      <p>
+        Max Customers: <input type="number" name="Max Customers" />
+      </p>
+      <p>
+        Average Cookie Sale: <input type="number" name="Average Cookie Sale" />
+      </p>
+      <p>
+        Hour Open: <input type="number" name="Hour Open" />
+        <select name="AM/PM">
+          <option value = "AM">AM</option>
+          <option value = "PM">PM</option>
+        </select>
+      </p>
+      <p>
+        Hour Close: <input type="number" name="Hour Close" />
+        <select name="AM/PM">
+          <option value = "PM">PM</option>
+          <option value = "AM">AM</option>
+        </select>
+      </p>
+
+  <!--  <label class="wrapped-label">
+        <span>Quantity:</span>
+        <input type="text" name="quantity" /> -->
+    </form>
+
 <script src="object.js"></script>
 <script src="sales.js"></script>
 
