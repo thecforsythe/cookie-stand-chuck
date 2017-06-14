@@ -21,7 +21,7 @@ var simulateCustomersPerHour = function () {
   for(var i = 0; i < this.hourClosed - this.hourOpen; i++) {
     var customerCount = this.randomCustomerPerHour();
     var time = (i + 6);
-    //'Hour: ' + convert24HourTime(time) + ', Cookies Sold: ' + customerCount;
+    //Not This-->.'Hour: ' + convert24HourTime(time) + ', Cookies Sold: ' + customerCount;
     hours[i] = customerCount * this.aveCookieSalePerCustomer;
     this.customersPerHour = hours;
   }

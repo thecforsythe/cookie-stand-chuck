@@ -28,4 +28,25 @@ for(var i = 0; i < allLocations.length; i++){
   var totalListItem = document.createElement('li');
   newList.appendChild(totalListItem);
   totalListItem.textContent = 'total';
-};
+//// tinkering with sum array function posted in slack. I think I want it to sum the varriable customerCount on line 20.
+    var testArray = customerCount;
+
+function sumArray(testArray){
+  var calculatedSum = 0;
+  for(var i = 0; i < testArray.length; i++) {
+    var valueFromArray = testArray[i];
+
+    calculatedSum = sum(valueFromArray, calculatedSum)[0];
+  }
+
+  return [
+    calculatedSum,
+    testArray + ' was passed in as an array of numbers, and ' + calculatedSum + ' is their sum.'
+  ];
+}
+
+// Here is the test for sumArray(); uncomment it to run it
+
+testSumArray(testArray);
+customerCount);
+};)
