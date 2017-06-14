@@ -21,7 +21,7 @@ var simulateCustomersPerHour = function () {
   for(var i = 0; i < this.hourClosed - this.hourOpen; i++) {
     var customerCount = this.randomCustomerPerHour();
     var time = (i + 6);
-    //console.log('hours: ' + convert24HourTime(time) + ', cookies: ' + customerCount);
+    //'Hour: ' + convert24HourTime(time) + ', Cookies Sold: ' + customerCount;
     hours[i] = customerCount * this.aveCookieSalePerCustomer;
     this.customersPerHour = hours;
   }
@@ -57,7 +57,7 @@ var AllLocationData = [
   new EmptyLocationData('Alki', '3890 Rupet Way', 2, 16, 4.6),
 ];
 
-AllLocationData[0].simulateCustomersPerHour()
+AllLocationData[0].simulateCustomersPerHour();
 /* Old object data
 var firstAndPike = {
   location: 'First and Pike',
