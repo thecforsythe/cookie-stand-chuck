@@ -11,7 +11,7 @@ body {
   background-image: url(Pictures/salmon.png);
   background-repeat: no-repeat;
   background-color: #f29d5c;
-  background-position: center;
+  background-position: center 100px;
   font-family: 'Amatic SC', cursive;
   color: #4c514d
 }
@@ -35,6 +35,8 @@ h3 {
   font-family: 'Permanent Marker', cursive;
   font-size: 1em;
   text-align: center;
+  color: #f9f9ef
+
 
 }
 .sticker {
@@ -51,7 +53,6 @@ aside {
   max-width: 30%;
   background-color: #8c3838;
   float: left;
-  padding-right: 30px;
   height: 100%;
 }
 ul{
@@ -66,5 +67,6 @@ p {
 }
 .fishIcon{
   object-fit: fill;
-  margin: auto;
+  max-width: 100%;
+  margin-right: -30px
 }
