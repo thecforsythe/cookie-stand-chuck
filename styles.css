@@ -1,0 +1,70 @@
+/* colors:
+#f29d5c pink
+#3d7244 green
+#eaeaea light grey
+#4c514d dark grey
+#8c3838 maroon
+#f9f9ef creame
+*/
+
+body {
+  background-image: url(Pictures/salmon.png);
+  background-repeat: no-repeat;
+  background-color: #f29d5c;
+  background-position: center;
+  font-family: 'Amatic SC', cursive;
+  color: #4c514d
+}
+.container {
+  max-width: 70%;
+  background-color: #eaeaea;
+  position:relative;
+  margin: auto;
+}
+h1 {
+  font-family: 'Frijole', cursive;
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 70px;
+  color: #f9f9ef;
+  -webkit-text-stroke: 1px #8c3838;
+  border: 1px solid red
+
+}
+h3 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1em;
+  text-align: center;
+
+}
+.sticker {
+  transform: rotate(-40deg);
+  border: 1px solid red;
+  position: relative;
+  margin: 12% 0px 0px -40%
+}
+
+#tagLine {
+  font-size: 1em
+}
+aside {
+  max-width: 30%;
+  background-color: #8c3838;
+  float: left;
+  padding-right: 30px;
+  height: 100%;
+}
+ul{
+
+
+}
+form {
+  background-color: #3d7244;
+}
+p {
+
+}
+.fishIcon{
+  object-fit: fill;
+  margin: auto;
+}

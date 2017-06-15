@@ -2,43 +2,64 @@
 <html>
 <head>
   <title>Pat's Salmon Cookies</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 <body>
-  <ul>
-    <li>About Us</li>
-    <li>Locations</li>
-    <li>Menu</li>
-    <li>Contact</li>
+  <h1>Pat's Salmon<br />
+     Cookies</h1>
+  <div class="sticker">
+    <h3 >
+      The BEST <br />
+      tasting salmon cookies<br />
+      in the tri-state area<br />
+       <span id="tagLine">Made Fresh Daily!</span>
+    </h3>
+  </div>
+  <div class="container">
+    <aside>
+      <img src="Pictures/chinook.jpg" class="fishIcon" />
+      <ul>
+        <li>About Us</li>
+        <li>Locations</li>
+        <li>Menu</li>
+        <li>Contact</li>
+      </ul>
+    </aside>
 
-  </ul>
-  <h1>Pat's Salmon Cookies</h1>
-  <p>
-    The best tasting salmon cookies in the tri-state area!<br />
-    Made Fresh Daily
-  </p>
+
   <h3>Sales Data</h3>
   <form action="https://requestb.in/qjtonmqj">
     <fieldset>
       <legend>Create New Store Location</legend>
 <!-- I don't want bullet points on my inputs so I am using a <p> tag instead of a <li> tag. -->
       <p>
-        Location Name: <input type="text" name="Location Name" placeholder="First &amp Pike" id="locName"/><br/>
+        Location Name: <label for="locName" ></label>
+        <input type="text" name="locationName" placeholder="First &amp Pike"  id="locName"/><br/>
 
-        Street Address: <input type="text" name="Stree Address" placeholder="1800 S First St." id="address"/><br />
+        Street Address: <label for="address" ></label>
+        <input type="text" name="streetAddress" placeholder="1800 S First St." for="address" id="address"/><br />
 
-        Min Customers: <input type="number" name="Min Customers" id="minC"/><br/>
+        Min Customers: <label for="minC" ></label>
+        <input type="number" name="minCustomers" for="minC" id="minC"/><br/>
 
-        Max Customers: <input type="number" name="Max Customers" id="maxC"/><br/>
+        Max Customers: <label for="maxC" ></label>
+        <input type="number" name="maxCustomers" for="maxC" id="maxC"/><br/>
 
-        Average Cookie Sale: <input type="number" name="Average Cookie Sale" step="0.1" id="average"/><br/>
+        Average Cookie Sale: <label for="average" ></label>
+        <input type="number" name="averageCookieSale" step="0.1" for="average" id="average"/><br/>
 
-        Hour Open: <input type="number" name="Hour Open" min="1" max="12" value="6" step="0.5" id="open"/>
+        Hour Open: <label for="open" ></label>
+        <input type="number" name="hourOpen" min="1" max="12" value="6" step="0.5" for="open" id="open"/>
         <select name="AM/PM">
           <option value = "AM">AM</option>
           <option value = "PM">PM</option>
         </select><br />
 
-        Hour Close: <input type="number" name="Hour Close" min="1" max="12" value="8" step="0.5" id="close"/>
+        Hour Close: <label for="submit" ></label>
+        <input type="number" name="hourClose" min="1" max="12" value="8" step="0.5" for="close" id="close"/>
         <select name="AM/PM">
           <option value = "PM">PM</option>
           <option value = "AM">AM</option>
@@ -55,6 +76,7 @@
 <script src="object.js"></script>
 <script src="sales.js"></script>
 
+</div>
 
 </body>
 </html>
