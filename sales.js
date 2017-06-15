@@ -6,7 +6,7 @@ for(var i = 0; i < allLocations.length; i++){
 
 // Create a header for each of the restaraunt locations.
   var newH3 = document.createElement('h3'); // createElement: creates a h3 parent node stored in var newH3
-  newH3.textContent = currentLocation.location;//textContent: takes the .location of each location stored in the Array named currentLocation.
+  newH3.textContent = currentLocation.locationName;//textContent: takes the .location of each location stored in the Array named currentLocation.
   document.body.appendChild(newH3);//appendChild takes .location and adds it as an h3 element, which is the child element of body.
 
   //want to create a list for each location
@@ -28,8 +28,9 @@ for(var i = 0; i < allLocations.length; i++){
   var totalListItem = document.createElement('li');
   newList.appendChild(totalListItem);
   totalListItem.textContent = 'total';
+}
 //// tinkering with sum array function posted in slack. I think I want it to sum the varriable customerCount on line 20.
-    var testArray = customerCount;
+/*    var testArray = customerCount;
 
 function sumArray(testArray){
   var calculatedSum = 0;
@@ -49,4 +50,29 @@ function sumArray(testArray){
 
 testSumArray(testArray);
 customerCount);
-};)
+};
+*/
+
+// selecting all element id's
+var elLocName, elAddress, elMinC, elMaxC, elAverage;
+elLocName = document.getElementById('locName');
+elAddress = document.getElementById('address');
+elMinC = document.getElementById('minC');
+elMaxC = document.getElementById('maxC');
+elAverage = document.getElementById('average');
+
+//function to check there are no blank form fields
+function checkLocName(event){
+  if (elLocName = false) {
+    elLocName.innerHTML = 'Location Name cannot be blank';
+    event.preventDefault();
+  }
+}
+
+//function to create new location object
+function createNewLocationData(){
+
+}
+//
+var clickedSubmit = document.getElementById('submit');
+clickedSubmit.addEventListener('blur', createNewLocationData, false);

@@ -27,8 +27,8 @@ var simulateCustomersPerHour = function () {
   }
 };
 
-function EmptyLocationData(location, streetAddress, minNumberCustomers, maxNumberCustomers,aveCookieSalePerCustomer, hourOpen, hourClosed) {
-  this.location = location;
+function LocationData(locationName, streetAddress, minNumberCustomers, maxNumberCustomers,aveCookieSalePerCustomer, hourOpen, hourClosed) {
+  this.locationName = locationName;
   this.streetAddress = streetAddress;
   this.minNumberCustomers = minNumberCustomers;
   this.maxNumberCustomers = maxNumberCustomers;
@@ -37,30 +37,30 @@ function EmptyLocationData(location, streetAddress, minNumberCustomers, maxNumbe
   this.hourClosed = hourClosed || this.defaultHourClosed;
 }
 
-EmptyLocationData.prototype.defaultHourOpen = 6;
-EmptyLocationData.prototype.defaultHourClosed = 20;
-EmptyLocationData.prototype.simulateCustomersPerHour = simulateCustomersPerHour;
-EmptyLocationData.prototype.randomCustomerPerHour = randomCustomerPerHour;
+LocationData.prototype.defaultHourOpen = 6;
+LocationData.prototype.defaultHourClosed = 20;
+LocationData.prototype.simulateCustomersPerHour = simulateCustomersPerHour;
+LocationData.prototype.randomCustomerPerHour = randomCustomerPerHour;
 
-EmptyLocationData.prototype.render = function() {
+LocationData.prototype.render = function() {
   console.log(this);
 };
 
-//var firstAndPike = new EmptyLocationData('Pickle', '1200 Franklin', 2, 10, 3.33);
+//var firstAndPike = new LocationData('Pickle', '1200 Franklin', 2, 10, 3.33);
 //console.log(firstAndPike);
 
 var AllLocationData = [
-  new EmptyLocationData('First and Pike', '1800 S First St.', 23, 65, 6.3),
-  new EmptyLocationData('SeaTac Airport', '6573 Airport Ave.', 3, 24, 1.2),
-  new EmptyLocationData('Seatle Center', '1200 Johnson Ave', 11, 38, 3.7),
-  new EmptyLocationData('Capitol Hill', '4489 N. Capitol St.', 20, 38, 2.3),
-  new EmptyLocationData('Alki', '3890 Rupet Way', 2, 16, 4.6),
+  new LocationData('First and Pike', '1800 S First St.', 23, 65, 6.3),
+  new LocationData('SeaTac Airport', '6573 Airport Ave.', 3, 24, 1.2),
+  new LocationData('Seatle Center', '1200 Johnson Ave', 11, 38, 3.7),
+  new LocationData('Capitol Hill', '4489 N. Capitol St.', 20, 38, 2.3),
+  new LocationData('Alki', '3890 Rupet Way', 2, 16, 4.6),
 ];
 
 AllLocationData[0].simulateCustomersPerHour();
 /* Old object data
 var firstAndPike = {
-  location: 'First and Pike',
+  locationName: 'First and Pike',
   streetAddress: '1800 S First St.',
   hourOpen: 6,
   hourClosed : 20,
@@ -71,7 +71,7 @@ var firstAndPike = {
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var seaTacAirport = {
-  location: 'SeaTac Airport',
+  locationName: 'SeaTac Airport',
   streetAddress: '6573 Airport Ave.',
   hourOpen: 6,
   hourClosed: 20,
@@ -82,7 +82,7 @@ var seaTacAirport = {
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var seatleCenter = {
-  location: 'Seatle Center',
+  locationName: 'Seatle Center',
   streetAddress: '1200 Johnson Ave',
   hourOpen: 6,
   hourClosed: 20,
@@ -93,7 +93,7 @@ var seatleCenter = {
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var capitolHill = {
-  location: 'Capitol Hill',
+  locationName: 'Capitol Hill',
   streetAddress: '4489 N. Capitol St.',
   hourOpen: 6,
   hourClosed: 20,
@@ -104,7 +104,7 @@ var capitolHill = {
   randomCustomerPerHour: randomCustomerPerHour,
 };
 var alki = {
-  location: 'Alki',
+  locationName: 'Alki',
   streetAddress: '3890 Rupet Way',
   hourOpen: 6,
   hourClosed: 20,
