@@ -71,7 +71,6 @@ function formSubmit(event) {
 
   var age = document.querySelector('input[name="age"]');
   console.log(age.value);
-
   
 //function to check there are no blank form fields
 function checkLocName(event){
