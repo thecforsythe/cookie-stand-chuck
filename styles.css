@@ -10,17 +10,17 @@
 body {
   background-image: url(Pictures/salmon.png);
   background-repeat: no-repeat;
-  background-color: white;
+  background-color: #3d7244;
   background-position: center 150px;
   font-family: 'Amatic SC', cursive;
-  color: #4c514d;
+  color: #efddd7;
 }
 .container {
   max-width: 70%;
-  background-color: #eaeaea;
   position:relative;
   margin: auto;
-  border: 1px solid red;
+  border: 1px solid blue;
+  height: 300px;
 }
 h1 {
   font-family: 'Frijole', cursive;
@@ -62,8 +62,27 @@ aside {
   height: 100%;
   margin: 100px 0px 0px 0px
 }
-ul{
+header{
+  margin-top: 50px;
+  text-align: center;
+  max-width: 100%;
+  border: 3px solid #red;
 
+  border-top: 2px solid #efddd7;
+  border-bottom: : 2px solid #efddd7;
+  margin-bottom: 50px;
+  overflow: visible;
+
+}
+ul{
+}
+li{
+  display:inline;
+  margin:5%;
+  vertical-align: middle;
+  font-size: 25px;
+  overflow: visible;
+}
 
 }
 form {
