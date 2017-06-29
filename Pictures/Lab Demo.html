@@ -1,0 +1,132 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Gist
+ @thecforsythe
+ Sign out
+ Watch 2
+  Unstar 2
+  Fork 3 DeltaVCode/cr-201-2017
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki Insights
+Branch: master Find file Copy pathcr-201-2017/class-08-forms-events/code-demos/form.html
+047b9d4  2 hours ago
+@dahlbyk dahlbyk Form submit demo
+1 contributor
+RawBlameHistory
+112 lines (107 sloc)  3.3 KB
+<html>
+<head>
+  <title>Form Demo</title>
+  <link rel="stylesheet" href="formstyles.css"  />
+</head>
+<body onload="doOnLoad()">
+  <h1>Form Demo Page</h1>
+  <form action="https://requestb.in/1ej5fes1" method="POST">
+    <fieldset>
+      <legend>Add To Cart</legend>
+      <input type="hidden" name="productSku" value="123456"  />
+      <label class="wrapped-label">
+        <span>Quantity:</span>
+        <input type="text" name="quantity" />
+      </label>
+    </fieldset>
+    <fieldset id="demo-fieldset">
+      <legend>Form Demo Fields</legend>
+      <ul>
+        <li>
+          <label class="single-label" for="textField">Text Fieldzzz:</label>
+          <input type="text" name="textField" id="textField" />
+        </li>
+        <li>
+          <label class="single-label" for="email">Email:</label>
+          <input type="email" name="textField" id="email" placeholder="you@example.com" />
+        </li>
+        <li>
+          <label class="single-label" for="age">Age:</label>
+          <input type="number" name="age" id="age"
+            min="0" max="2" step="0.1"
+            />
+        </li>
+        <li>
+          <label class="single-label" for="textArea">Text Area:</label>
+          <textarea name="textArea" rows="8" cols="30" id="textArea"></textarea>
+        </li>
+        <li>
+          <label class="single-label">Password:</label>
+          <input type="password" name="passwordField" required="required" />
+        </li>
+        <li>
+          Radio Buttons (either/or):
+          <label for="noRadioButton">No Label</label>
+
+          <label>
+            <input type="radio" name="radioButton" value="1" /> Yes
+          </label>
+
+          <input type="radio" name="radioButton" value="0" id="noRadioButton" />
+          <label for="noRadioButton">No</label>
+        </li>
+        <li>
+          Will it rain today?
+          <input type="radio" name="rain" value="1" /> Yes
+          <input type="radio" name="rain" value="0" /> No
+        </li>
+        <li>
+          What weather will we have today?
+          <input type="checkbox" name="weather" value="rain" /> Rain
+          <input type="checkbox" name="weather" value="snow" /> Snow
+          <input type="checkbox" name="weather" value="sun" /> Sun
+          <input type="checkbox" name="weather" value="wind" /> Wind
+        </li>
+        <li>
+          Dropdown list
+          <select name="singleDropDown">
+            <option value="0">
+              Zero
+            </option>
+
+            <optgroup label="Spanish">
+              <option value="1">
+                Uno
+              </option>
+              <option value="2">
+                Dos
+              </option>
+            </optgroup>
+
+            <optGroup label="French">
+              <option value="3">
+                Trois
+              </option>
+            </optGroup>
+          </select>
+        </li>
+        <li>
+          Multi-Select
+          <select multiple="multiple" name="stooges" size="2">
+            <option>
+              Larry
+            </option>
+            <option>
+              Curly
+            </option>
+            <option>
+              Moe
+            </option>
+          </select>
+        </li>
+        <li>
+          Submit button:
+          <input type="submit" value="Save This Stuff" />
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+  <script src="events.js"></script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
